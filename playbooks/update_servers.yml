@@ -1,13 +1,12 @@
+# Requieres a list of [servers_to_update] in a hosts file.
 ---
-# Requieres a list of [debian_servers_to_update] in a hosts file.
 - name: Update all Debian servers
-  hosts: debian_servers_to_update
+  hosts: servers_to_update
   become: true
   tasks:
     - name: Update packages
       ansible.builtin.apt:
         update_cache: true
-
     - name: Upgrade packages
       ansible.builtin.apt:
         upgrade: dist
