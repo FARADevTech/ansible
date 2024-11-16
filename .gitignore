@@ -1,0 +1,37 @@
+# Ignorera temporära filer och mappar
+*.tmp
+*.swp
+*.bak
+*.old
+*.orig
+
+# Ignorera SSH-nycklar och konfidentiella filer
+*.pem
+*.key
+*.pub
+
+# Ignorera Ansible Vault-filer
+*.vault
+*.vault.yml
+*.vault.enc
+
+# Ignorera loggfiler
+*.log
+
+# Ignorera cachade filer
+.cache/
+*.retry
+
+# Ignorera miljöspecifika filer
+.env
+.ansible.cfg
+
+# Ignorera virtuella miljöer
+venv/
+env/
+
+# Ignorera hosts filer
+hosts
+
+# VSCode
+.vscode
