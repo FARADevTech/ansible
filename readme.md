@@ -1,8 +1,9 @@
 # Ansible playbooks
 
 ## Playbooks
-### update_servers.yml
-This playbook performs a two-step process on specified Debian servers: first, it updates the package cache, and then it upgrades all installed packages to ensure that the servers are running the latest software versions. This is an essential maintenance task for keeping systems secure and up to date.
+
+### install_docker.yml
+This playbook automates the entire process of installing Docker on a Debian server, making it easy to set up and manage Docker environments across multiple servers.
 
 ### new_server.yml
 This playbook is designed to set up a new Debian server with essential security and configuration settings.
@@ -16,6 +17,10 @@ This playbook is designed to set up a new Debian server with essential security 
     - Allow OpenSSH
     - Default deny incoming
     - Default allow outgoing
+
+### update_servers.yml
+This playbook performs a two-step process on specified Debian servers: first, it updates the package cache, and then it upgrades all installed packages to ensure that the servers are running the latest software versions. This is an essential maintenance task for keeping systems secure and up to date.
+
 
 ## Hosts
 Remember to create a hosts file with a list of hosts you want to interact with. 

@@ -1,7 +1,7 @@
-# Requieres a list of [servers_to_update] in a hosts file.
+# Requieres a list of [update_server] in a hosts file.
 ---
 - name: Update all Debian servers
-  hosts: servers_to_update
+  hosts: update_server
   become: true
   tasks:
     - name: Update packages

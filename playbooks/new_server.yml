@@ -6,7 +6,7 @@
   vars_prompt:
     - name: new_hostname
       prompt: "Enter new hostname"
-      private: no    
+      private: no
   tasks:
     - name: Configure the hostname
       ansible.builtin.hostname:
@@ -61,3 +61,5 @@
           community.general.ufw:
             default: deny
             direction: incoming
+    - name: Reboot
+      ansible.builtin.reboot:
