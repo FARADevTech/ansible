@@ -10,26 +10,9 @@
 
 [Update Debian server](playbooks/update_server.yml)
 
-## Hosts file
+## Help
 
-<details>
-<summary>Create a hosts file</summary>
-<br>
-
-Create a `hosts` file with a list of hosts you want to interact with. 
-```sh
-[<group_name>]
-<username>@<hostname>
-```
-
-example:
-```sh
-[update_server]
-jondoe@192.168.1.10
-```
-</details>
-
-## Commands
+### Commands
 
 <details>
 <summary>Run a playbook</summary>
@@ -51,7 +34,26 @@ ansible-playbook -i hosts playbooks/<playbook>.yml --ask-become-pass
 ```
 </details>
 
-## Install Ansible
+### Hosts file
+
+<details>
+<summary>Create a hosts file</summary>
+<br>
+
+Create a `hosts` file with a list of hosts you want to interact with. 
+```sh
+[<group_name>]
+<username>@<hostname>
+```
+
+example:
+```sh
+[update_server]
+jondoe@192.168.1.10
+```
+</details>
+
+### Install Ansible
 
 <details>
 <summary>Debian</summary>
