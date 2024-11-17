@@ -1,4 +1,8 @@
+# This playbook automates the entire process of installing Docker on a Debian server,
+# making it easy to set up and manage Docker environments across multiple servers.
+#
 # Requieres a list of [install_docker] in a hosts file.
+#
 # ansible-playbook -i hosts playbooks/apps/install_docker.yml --ask-become-pass
 ---
 - name: Install Docker

@@ -1,4 +1,8 @@
+# This playbook performs a two-step process on specified Debian servers: first, it updates the package cache,
+# and then it upgrades all installed packages to ensure that the servers are running the latest software versions.
+#
 # Requieres a list of [update_server] in a hosts file.
+#
 # ansible-playbook -i hosts playbooks/update_server.yml --ask-become-pass
 ---
 - name: Update all Debian servers

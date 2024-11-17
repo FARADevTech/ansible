@@ -1,4 +1,17 @@
+# This playbook is designed to set up a new Debian server with essential security and configuration settings.
+# - Hostname
+# - Updates
+# - Automatic security updates
+# - Configure SSH
+#     - Disable ROOT login
+#     - Disable password login
+# - Enable UFW
+#     - Allow OpenSSH
+#     - Default deny incoming
+#     - Default allow outgoing
+#
 # Requieres a list of [configure_new_debian_server] in a hosts file.
+# 
 # ansible-playbook -i hosts playbooks/configure_new_debian_server.yml --ask-become-pass
 ---
 - name: Install a new Debian server
