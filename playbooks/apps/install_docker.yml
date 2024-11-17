@@ -1,4 +1,5 @@
 # Requieres a list of [install_docker] in a hosts file.
+# ansible-playbook -i hosts playbooks/apps/install_docker.yml --ask-become-pass
 ---
 - name: Install Docker
   hosts: install_docker

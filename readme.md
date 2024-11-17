@@ -1,11 +1,19 @@
+![Ansible logo](https://upload.wikimedia.org/wikipedia/commons/0/05/Ansible_Logo.png)
+
 # Ansible playbooks
 
 ## Playbooks
-
-### install_docker.yml
+### Apps
+#### Install Docker
 This playbook automates the entire process of installing Docker on a Debian server, making it easy to set up and manage Docker environments across multiple servers.
 
-### new_server.yml
+```sh
+ansible-playbook -i hosts playbooks/apps/install_docker.yml --ask-become-pass
+```
+[See playbook](playbooks/apps/install_docker.yml)
+
+### Server
+#### Configure new Debian server
 This playbook is designed to set up a new Debian server with essential security and configuration settings.
 - Hostname
 - Updates
@@ -18,12 +26,21 @@ This playbook is designed to set up a new Debian server with essential security 
     - Default deny incoming
     - Default allow outgoing
 
-### update_servers.yml
+```sh
+ansible-playbook -i hosts playbooks/configure_new_debian_server.yml --ask-become-pass
+```
+[See playbook](playbooks/configure_new_debian_server.yml)
+
+### Update Debian server
 This playbook performs a two-step process on specified Debian servers: first, it updates the package cache, and then it upgrades all installed packages to ensure that the servers are running the latest software versions. This is an essential maintenance task for keeping systems secure and up to date.
 
+```sh
+ansible-playbook -i hosts playbooks/update_server.yml --ask-become-pass
+```
+[See playbook](playbooks/update_server.yml)
 
 ## Hosts
-Remember to create a hosts file with a list of hosts you want to interact with. 
+reate a `hosts` file with a list of hosts you want to interact with. 
 
 ## Commands to run
 ### Run a playbook

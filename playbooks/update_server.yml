@@ -1,4 +1,5 @@
 # Requieres a list of [update_server] in a hosts file.
+# ansible-playbook -i hosts playbooks/update_server.yml --ask-become-pass
 ---
 - name: Update all Debian servers
   hosts: update_server

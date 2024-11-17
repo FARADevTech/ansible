@@ -1,7 +1,8 @@
-# Requieres a list of [new_server] in a hosts file.
+# Requieres a list of [configure_new_debian_server] in a hosts file.
+# ansible-playbook -i hosts playbooks/configure_new_debian_server.yml --ask-become-pass
 ---
 - name: Install a new Debian server
-  hosts: new_server
+  hosts: configure_new_debian_server
   become: true
   vars_prompt:
     - name: new_hostname
