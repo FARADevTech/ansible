@@ -88,3 +88,9 @@ Verify that Ansible is installed correctly by running the following command:
 ansible --version
 ```
 </details>
+
+### Read more about Ansible
+
+[Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)
+
+[Ansible GitHub](https://github.com/ansible/ansible)
